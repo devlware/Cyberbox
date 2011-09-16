@@ -1,0 +1,66 @@
+O que é Cyberbox
+
+É um equipamento eletrônico microcontrolado e programável que pode acionar dispositivos como motores e mini-lâmpadas e ler sensores como  temperatura, luminosidade entre outros. Para que esse equipamente execute suas funções ele deve estar conectado a um micro computador para receber os comandos.
+
+Funcionamento
+
+A Interface Cyberbox funciona a partir do recebimento de comandos. Esses podem acionar as portas de saída, ler as portas de entrada digitais ou analógicas entre outras atividades. Durante o design da placa optou-se por ter um microcontrolador responsável por algumas funções básicas como comunicação com o PC e leitura das portas de entrada (Master) e um outro apenas para o controle das portas de saída digitais (Slave). Como temos dois microcontroladores com funções específicas, cada um deles deve possuir seu próprio conjunto de instruções, é isto o que cada firmware faz. 
+
+Os diretórios Master e Slave disponíveis neste repositório contém os códigos que são gravados em cada um dos microcontroladores. Para entender como enviar comandos para a Cyberbox leia o arquivo CyberProtocol.pdf disponível na pasta Documetos.
+
+Abaixo são comentadas as principais funções de cada um dos firmwares.
+
+Master
+
+- Receber e enviar dados para o computador
+- Enviar comandos para o microcontrolador Slave
+- Fazer a leitura das portas analógicas ou digitais
+
+Slave
+
+- Receber e enviar dados para o microcontrolador Master
+- Controlar o acionamento das portas de saída digitais
+
+Características físicas
+
+A Cyberbox contém 8 entradas analógicas, 16 entradas digitais e 12 saídas digitais.
+
+Requisitos Mínimos para utilizar a Cyberbox
+
+- Pentium classe III, 500 MHz
+- Porta serial RS-232 ou conversor USB-Serial
+- 256 MB de memória RAM
+- 20 MB de espaço disponível em disco rígido
+- Mouse
+- Windows 98, XP Home/Pro ou mais novo ou Linux
+- Aplicativo para visualização de arquivos PDF
+
+
+Abaixo segue uma breve descrição dos elementos que podem ser acoplados a Cyberbox.
+
+Controle de Atuadores
+
+Atuar é interagir com objetos, pode-se considerar um atuador um elemento que transforma um tipo de energia em outro. Por exemplo um motor elétrico transforma energia elétrica em movimento, um motor a combustão transforma a energia química em movimento. Os atuadores que são ligados a Cyberbox convertem energia elétrica em outras formas de energia como movimento, luz, som para citar alguns. Podemos ilustrar alguns atuadores:
+
+- Motores
+- Lâmpadas
+- Bobinas
+- Relés
+- Alarmes Sonoros
+
+Leitura de Sensores
+
+Sensores são elementos que convertem variáveis físicas como luz, temperatura, umidade, velocidade, aceleração em energia elétrica. O nível de energia de cada sensor depois de lido deve ser interpretado e com base nele tomar as decisões necessárias. Eis exemplos de sensores:
+
+- Sensores de luz
+- Sensores de temperatura
+- Sensores de presença
+- Sensores magnéticos
+- Sensores capacitivos
+- Sensores indutivos
+- Sensores de toque
+- Sensores de umidade
+- Sensores de ângulo
+
+Para dúvidas sobre o funcionamento dos códigos dos microcontroladores entre em contato, opensource@imbrax.com.br.
+
